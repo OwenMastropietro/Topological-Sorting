@@ -43,17 +43,25 @@
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
-- BFS & DFS Description
+- **Bredth-First Search, BFS, and Depth-First Search, DFS,** are both graph traversal algorithms with O(V + E) time complexity. Use BFS for deep trees, DFS for broad trees (BFS is memory space hungry).
 
-- ***Figure x.x***
+- **BFS Implementation**
 ```python
-# BFS Implementation
+marked = [False] * G.size()
+def bfs(G,v):
+  queue = [v]
+  while len(queue) > 0:
+    v = queue.pop(0)
+    if not marked[v]:
+      visit(v) # Pre-order
+      marked[v] = True
+      for w in G.neighbors(v):
+        if not marked[w]:
+          queue.append(w)
 ```
 
-- Depth-First Search, DFS, is a graph traversal algorithm.
-- ***Figure x.x***
+- **Pythonic Pseudo-Code for a pre-ordered recursive approach**
 ```python
-# Pythonic Pseudo-Code for a pre-ordered recursive approach
 marked = [False] * G.size()
 def dfs(G,v):
   visit(v) # Pre-order
@@ -63,9 +71,8 @@ def dfs(G,v):
       dfs(G, w)
 ```
 
-- ***Figure x.x***
+- **Pythonic Pseudo-Code for a post-ordered recursive approach** 
 ```python
-# Pythonic Pseudo-Code for a post-ordered recursive approach
 marked = [False] * G.size()
 def dfs(G,v):
   marked[v] = True
@@ -75,9 +82,9 @@ def dfs(G,v):
   visit(v) # Post-order
 ```
 
-- ***Figure x.x***
+
+- **Pythonic Pseudo-Code for iterative approach**
 ```python
-# Pythonic Pseudo-Code for iterative approach
 marked = [False] * G.size()
 def dfs(G,v):
   stack = [v]
@@ -90,14 +97,12 @@ def dfs(G,v):
       if not marked[w]:
         stack.append(w)
 ```
-- ***Figure x.x***
 
-- *The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
+*The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
 - Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
-- Using a Recursive Depth-First Search on a DAG.
-- ***Figure x.x***
+- **Using a Recursive Depth-First Search on a DAG.**
 ```c++
 static void DFS_topological_sort(Graph g)
 {
@@ -128,8 +133,7 @@ static void DFS(Graph G, int v)
 }
 ```
 
-- Using a Queue-based Source Removal Algorithm on a DAG. [^2]
-- ***Figure x.x***
+- **Using a Queue-based Source Removal Algorithm on a DAG.** [^2]
 ```c++
 static void BFS_topological_sort(Graph g)
 {
@@ -180,6 +184,29 @@ static void BFS_topological_sort(Graph g)
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
+
+## BFS use case
+```python
+def flood_fill(matrix, row, col, pixel_value):
+  start = matrix[row][col]
+  queue = [(row, col)] # Initialize queue with starting location as first value.
+  visited = set()
+  while len(queue) > 0:
+    row, col = queue.pop(0)
+    visited.add((row, col))
+    matrix[row][col] = pixel_value
+    for row, col in neighbors(matrix, row, col, start):
+      if (row, col) not in visited:
+        queue.append((row, col))
+return matrix
+
+def neighbors(matrix, row, col, start):
+  indices = [(row - 1, col), (row + 1, col), (row, col - 1), (row, col + !)]
+  return [(row, col) for row, col in indices if isValid(matrix, row, col) and matrix[row][col] == start]
+
+def isValid(matrix, row, col):
+  return row >= 0 and col >= 0 and row < len(matrix) and col < len(matrix[0])
+```
 
 <!-- FootNotes -->
 [^1]: Extra Credit Oportunity: Implement an Adjacency List in place of the inferior Adjacency Matrix.
