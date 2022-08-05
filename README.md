@@ -58,7 +58,7 @@ def dfs(G,v):
 ![DFS](label-dfs-traversal.png)
 
 ## Topological Sorting Algorithms
-- Recursive Depth-First Search on a Directed Acyclic Graph (DAG):
+- Recursive Depth-First Search on a DAG:
 ```c++
 static void DFS_topological_sort(Graph g)
 {
@@ -74,6 +74,7 @@ static void DFS_topological_sort(Graph g)
     }
   }
 }
+
 static void DFS(Graph G, int v)
 {
   G.set_value(v, visited);
@@ -83,6 +84,54 @@ static void DFS(Graph G, int v)
     if (G.get_value(neighbor_list.at(i)) != visited)
     {
       DFS(G, neighbor_list.at(i));
+    }
+  }
+}
+```
+- Using a Queue-based Source Removal Algorithm on a DAG
+```c++
+static void BFS_topological_sort(Graph g)
+{
+  Queue Q = new LQueue(G.node_count());
+  int[] count = new int[G.node_count()];
+  int[] neighbor_list;
+  // Initialize
+  for (int v = 0; v < v.node_count(); v++)
+  {
+    count.at(v) = 0;
+  }
+  // Process every edge
+  for (int v = 0; v < node_count(); v++)
+  {
+    neighbor_list = G.neighbors(v);
+    // Add to v's prereq count
+    for (int i = 0; i < neighbor_list.length(); i++)
+    {
+      count.at(neighbor_list.at(i))++;
+    }
+  }
+  // Initialize Queue
+  for (int v = 0; v < G.node_count(); v++)
+  {
+    if (count.at(v) == 0)
+    {
+      Q.enqueue(v);
+    }
+  }
+  // Process Vertices
+  while (Q.length() > 0)
+  {
+    v = (int)Q.dequeue();
+    print(v); // Previsit
+    neighbor_list = G.neighbors(v);
+    for (int i = 0; i < neighbor_list.length(); i++)
+    {
+      count.at(neighbor_list.at(i))--; // One less prereq
+      // This vertex is now free
+      if (count.at(neighbor_list.at(i)) == 0)
+      {
+        Q.enqueue(neighbor_list.at(i));
+      }
     }
   }
 }
