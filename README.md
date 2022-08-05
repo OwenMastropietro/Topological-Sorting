@@ -61,8 +61,9 @@ def bfs(G,v):
           queue.append(w)
 ```
 
-**Pythonic Pseudo-Code for a pre-ordered recursive approach**
+**DFS Implementation**
 ```python
+# Recursive Approach - (Pre-order)
 marked = [False] * G.size()
 def dfs(G,v):
   visit(v) # Pre-order
@@ -72,8 +73,8 @@ def dfs(G,v):
       dfs(G, w)
 ```
 
-**Pythonic Pseudo-Code for a post-ordered recursive approach** 
 ```python
+# Recursive Approach - (Post-order)
 marked = [False] * G.size()
 def dfs(G,v):
   marked[v] = True
@@ -83,9 +84,8 @@ def dfs(G,v):
   visit(v) # Post-order
 ```
 
-
-**Pythonic Pseudo-Code for iterative approach**
 ```python
+# Iterative Approach
 marked = [False] * G.size()
 def dfs(G,v):
   stack = [v]
