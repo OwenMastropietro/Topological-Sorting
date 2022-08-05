@@ -169,6 +169,6 @@ static void BFS_topological_sort(Graph g)
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
 
-## 2/2 Extra Credit Opportunities Successfully Pursued:
+<!-- FootNotes -->
 [^1]: Implemented Adjacency List in place of the inferior Adjacency Matrix.
 [^2]: Implemented Queue-Based Source Removal Algorithm in place of DFS.
