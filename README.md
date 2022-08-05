@@ -104,7 +104,7 @@ def dfs(G,v):
 ## Topological Sorting Algorithms
 ![Topological Sort](images/topological-sorting_ofCourse.png)
 
-Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
+**Topological sorting** a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
 
 **Using a Recursive Depth-First Search on a DAG.**
 ```c++
@@ -137,7 +137,7 @@ static void DFS(Graph G, int v)
 }
 ```
 
-**Using a Queue-based Source Removal Algorithm on a DAG.** [^2]
+**Using an Iterative Bredth-First Search on a DAG.** [^2]
 ```c++
 static void BFS_topological_sort(Graph g)
 {
