@@ -51,7 +51,7 @@ We can represent a DAG as follows:
 ```python
 # Iterative Approach
 marked = [False] * G.size()
-def bfs(G,v):
+def BFS(G,v):
   queue = [v]
   while len(queue) > 0:
     v = queue.pop(0)
@@ -67,7 +67,7 @@ def bfs(G,v):
 ```python
 # Iterative Approach
 marked = [False] * G.size()
-def dfs(G,v):
+def DFS(G,v):
   stack = [v]
   while(len(stack) > 0):
     v = stack.pop()
@@ -82,22 +82,22 @@ def dfs(G,v):
 ```python
 # Recursive Approach - (Pre-order)
 marked = [False] * G.size()
-def dfs(G,v):
+def DFS(G,v):
   visit(v) # Pre-order
   marked[v] = True
   for w in G.neighbors(v):
     if not marked[w]:
-      dfs(G, w)
+      DFS(G, w)
 ```
 
 ```python
 # Recursive Approach - (Post-order)
 marked = [False] * G.size()
-def dfs(G,v):
+def DFS(G,v):
   marked[v] = True
   for w in G.neighbors(v):
     if not marked[w]:
-      dfs(G, w)
+      DFS(G, w)
   visit(v) # Post-order
 ```
 *The above mentioned algorithms will both run in O(|v| + |E|) for both the iterative and recursive approaches.*
@@ -105,7 +105,13 @@ def dfs(G,v):
 ## Topological Sorting Algorithms
 ![Topological Sort](images/topological-sorting_ofCourse.png)
 
-**Topological sorting** a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
+**Topological sorting** a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering. This makes it useful in applications such as:
+1. Finding a cycle in a graph.
+2. Operating System deadlock detection
+3. Dependency Resolution
+4. Critical Path Analysis
+5. Data Serialization
+
 
 **Using a Recursive Depth-First Search on a DAG.**
 ```c++
@@ -187,6 +193,7 @@ static void BFS_topological_sort(Graph g)
 }
 ```
 ## Useful Resources
+- [Topological Sorting Applications](https://iq.opengenus.org/applications-of-topological-sort/#:~:text=The%20Applications%20of%20Topological%20Sort,Dependency%20resolution)
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
 
