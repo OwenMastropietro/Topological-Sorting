@@ -157,6 +157,7 @@ std::vector<unsigned int> DAG::topological_sort()
     // Vector to store optimal subset of vertices/clients.
     std::vector<unsigned int> toposorted(_DAG->size());
 
+    // Process Vertices
     // Go through the queue/possible subset, ...
     size_t i = 0;
     while (!source_queue.empty())
@@ -199,7 +200,7 @@ std::tuple<unsigned int, std::vector<unsigned int>> DAG::max_revenue()
     std::vector<unsigned int> max_neighbors(_DAG->size(), _clients.size());
 
     // Find f-values for topologically sorted vertices/clients and their neighbors.
-    // - For larger sample datasets, will need adjust i's datatype.
+    // - For larger sample datasets, will need to adjust i's datatype.
     for (int i = _toposorted.size() - 1; i >= 0; i--)
     {
         unsigned int current_node = _toposorted.at(i);

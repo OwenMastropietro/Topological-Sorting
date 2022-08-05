@@ -9,7 +9,7 @@
 class Adjacency_List
 {
 private:
-    // Vector to store vertices and their neighbors in a forward list. [Renamed _list to _adj_list?
+    // Vector to store vertices and their neighbors in a forward list. [Renamed _list to _adj_list]
     std::vector<std::forward_list<unsigned int>> _adj_list;
     // Vector to store number of incoming edges for vertices/clients.
     std::vector<unsigned int> _incoming_degrees_by_vertex;
