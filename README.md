@@ -27,7 +27,7 @@
 
 ## DFS Algorithm
 Depth First Search is a graph traversal algorithm.
-|
+*Note: The following two approaches both take O(V + E).*
 ```python
 # Pythonic Pseudo-Code for recursive approach
 marked = [False] * G.size()
@@ -38,7 +38,6 @@ def dfs(G,v):
     if not marked[w]:
       dfs(G, w)
 ```
-|
 ```python
 # Pythonic Pseudo-Code for iterative approach
 marked = [False] * G.size()
@@ -53,5 +52,4 @@ def dfs(G,v):
       if not marked[w]:
         stack.append(w)
 ```
-|
 ![DFS](label-dfs-traversal.png)
