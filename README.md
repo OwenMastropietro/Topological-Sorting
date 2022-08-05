@@ -29,6 +29,17 @@
 ![DAG](label-DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 - **Representation:**
+H~2~O
+X^2^
+
+| Operation | Adjacency List | Adjacency Matrix |
+| ------ | ------ | ------ |
+| Space Complexity | O(V + E)~worst~ | O(V^2^) |
+| Adding a Vertex | O(1) | O(V^2^) |
+| Adding an Edge | O(1) | O(1) |
+| Removing a Vertex | O(V + E) | O(V^2^) |
+
+
   - Adjacency List
     - Space Complexity: O(|V| + |E|) in the worst case.
     - Time Complexity:
@@ -37,9 +48,9 @@
       - Remove Vertex: O(|V| + |E|)
   - Adjacency Matrix
     - Space Complexity: O(|V|^2^) in the worst case.
-    - Add Vertex: O(|V|^2^) time
-    - Add edge: O(1) time
-    - Remove Vertex: O(|V|^2^) time
+    - Add Vertex: O(|V|^2^)
+    - Add edge: O(1)
+    - Remove Vertex: O(|V|^2^)
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](label-BFS_vs_DFS.png)
@@ -167,8 +178,3 @@ static void BFS_topological_sort(Graph g)
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
-
-| Syntax | Description |
-| ------ | ------ |
-| Header | Title |
-| Paragrapgh | Text |
