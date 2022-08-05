@@ -43,6 +43,7 @@
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
+
 **Bredth-First Search, BFS, and Depth-First Search, DFS,** are both graph traversal algorithms with O(V + E) time complexity. Use BFS for deep trees, DFS for broad trees (BFS is memory space hungry).
 
 **BFS Implementation**
