@@ -23,10 +23,10 @@
 
 ## Directed Acyclic Graph
 ![DAG](images/DAG.png)
-- A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
+- A **Directed Acyclic Graph, a DAG**, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 ### *Representation:*
   - We can represent a DAG as follows:
-    - a) Visually Pleasing
+    - a) Visual / Theoretical
     - b) Adjacency List
     - c) Adjacency Matrix
 
@@ -34,13 +34,14 @@
 
 ### *We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:* [^1]
 
+<center>
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
 | Space Complexity | O(V + E)<sub>worst</sub> | O(V<sup>2</sup>)<sub>worst</sub> |
 | Adding a Vertex | O(1) | O(V<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
 | Removing a Vertex | O(V + E) | O(V<sup>2</sup>) |
-
+</center>
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
@@ -50,7 +51,7 @@
 # BFS Implementation
 ```
 
-- ***Figure x.x***
+- *Figure x.x*
 - Depth-First Search, DFS, is a graph traversal algorithm.
 ```python
 # Pythonic Pseudo-Code for a pre-ordered recursive approach
@@ -63,7 +64,7 @@ def dfs(G,v):
       dfs(G, w)
 ```
 
-- ***Figure x.x***
+- *Figure x.x*
 ```python
 # Pythonic Pseudo-Code for a post-ordered recursive approach
 marked = [False] * G.size()
@@ -75,7 +76,7 @@ def dfs(G,v):
   visit(v) # Post-order
 ```
 
-- ***Figure x.x***
+- *Figure x.x*
 ```python
 # Pythonic Pseudo-Code for iterative approach
 marked = [False] * G.size()
@@ -90,7 +91,7 @@ def dfs(G,v):
       if not marked[w]:
         stack.append(w)
 ```
-- ***Figure x.x***
+- *Figure x.x*
 
 - *The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
@@ -126,7 +127,7 @@ static void DFS(Graph G, int v)
   }
 }
 ```
-- ***Figure x.x***
+- *Figure x.x*
 
 - Using a Queue-based Source Removal Algorithm on a DAG. [^2]
 ```c++
@@ -176,7 +177,7 @@ static void BFS_topological_sort(Graph g)
   }
 }
 ```
-- ***Figure x.x***
+- *Figure x.x*
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
