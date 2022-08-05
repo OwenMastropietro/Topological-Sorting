@@ -43,9 +43,9 @@
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
-- **Bredth-First Search, BFS, and Depth-First Search, DFS,** are both graph traversal algorithms with O(V + E) time complexity. Use BFS for deep trees, DFS for broad trees (BFS is memory space hungry).
+**Bredth-First Search, BFS, and Depth-First Search, DFS,** are both graph traversal algorithms with O(V + E) time complexity. Use BFS for deep trees, DFS for broad trees (BFS is memory space hungry).
 
-- **BFS Implementation**
+**BFS Implementation**
 ```python
 marked = [False] * G.size()
 def bfs(G,v):
@@ -60,7 +60,7 @@ def bfs(G,v):
           queue.append(w)
 ```
 
-- **Pythonic Pseudo-Code for a pre-ordered recursive approach**
+**Pythonic Pseudo-Code for a pre-ordered recursive approach**
 ```python
 marked = [False] * G.size()
 def dfs(G,v):
@@ -71,7 +71,7 @@ def dfs(G,v):
       dfs(G, w)
 ```
 
-- **Pythonic Pseudo-Code for a post-ordered recursive approach** 
+**Pythonic Pseudo-Code for a post-ordered recursive approach** 
 ```python
 marked = [False] * G.size()
 def dfs(G,v):
@@ -83,7 +83,7 @@ def dfs(G,v):
 ```
 
 
-- **Pythonic Pseudo-Code for iterative approach**
+**Pythonic Pseudo-Code for iterative approach**
 ```python
 marked = [False] * G.size()
 def dfs(G,v):
@@ -102,7 +102,7 @@ def dfs(G,v):
 
 ## Topological Sorting Algorithms
 - Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
-- **Using a Recursive Depth-First Search on a DAG.**
+**Using a Recursive Depth-First Search on a DAG.**
 ```c++
 static void DFS_topological_sort(Graph g)
 {
