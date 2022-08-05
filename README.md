@@ -10,7 +10,7 @@
   2. `$ ./topological_sort.out`
   3. Follow the prompts for entering significant data.
 
-### 2/2 Extra Credit Opportunities Successfully Pursued:
+## 2/2 Extra Credit Opportunities Successfully Pursued:
   1. Implemented Adjacency List in place of the inferior Adjacency Matrix.
   2. Implemented Queue-Based Source Removal Algorithm in place of DFS.
 
@@ -24,4 +24,14 @@
 - **Output:** Can output directly to screen or to files with user provided input. Will provide information on about the number of clients being considered in a particular sample input data, the optimal revenue that can be earned given the dataset, and the particular optimal subset of clients - which clients will be chosen to - contribute to the optimal revenue earned.
 
 - **Context:** In order to employ a decrease-and-conquer approach to achieving this we considered a directed-acyclic-graph-based (DAG) approach such that we could employ a source-removal algorithm, such as Depth First Search (DFS), to ensure all vertices in the graph are visisted - all clients in the sample data set are considered - while constructing an optimal subset of those clients to provide services to in order to achieve the maximum possible revenue. In representing this DAG, an adjacency list was chosen over an adjacency matrix because of it's potentially limiting space taken by entries in the matrix that don't correspond to useful data. This comes at the cost of time int searching the adjacency list. In an effort to offset the additional cost of time from our spacially-improved adjacency list representation, a queue-based source-removal algorithm was chosen over a DFS-based source-removal algorithm in order to reduce the time overhead stemming from the recursive calls made in the DFS approach.
-# cs415 Project 2
+
+## DFS
+```
+marked = [False] * G.size()
+def dfs(G,v):
+  visit(v)
+  marked[v] = True
+  for w in G.neighbors(v):
+    if not marked[w]:
+      dfs(G, w)
+```
