@@ -1,20 +1,19 @@
-# cs415 Project 2
-## Topological Sorting
+# Topological Sorting -- CS415 Project 2
 
-### Contributors:
-- Soren Richenberg
-- Owen Mastropietro
+## Contributors:
+  - Soren Richenberg
+  - Owen Mastropietro
 
-### Instructions To Run:
-1. `$ make`
-2. `$ ./topological_sort.out`
-3. Follow the prompts for entering significant data.
+## Instructions To Run:
+  1. `$ make`
+  2. `$ ./topological_sort.out`
+  3. Follow the prompts for entering significant data.
 
-### Extra Credit Opportunity:
+## Extra Credit Opportunity:
 - Implemented Adjacency List in place of the inferior Adjacency Matrix.
 - Implemented Queue-Based Source Removal Algorithm in place of DFS.
 
-### Project Reflection/Notes... work-in-progress:
+## Project Reflection/Notes... work-in-progress:
 - **Motivation:** Rental properties or Airbnb's need to efficiently select a chain of clients that will yield the maximum total revenue over a given period of time. For example, if a property is available for one year, there is a chance that renting to a smaller chain of clients will yield more revenue than a larger chain of clients depending on how much each client is paying and when they will be booked. This implementation gives us a real-world perspective in utilizing the deacrease-and-conquer approach for topologically sorting.
   - *Additional constraints to account for filtration of "bad" clients?*
   - *I wonder how I can apply this in a machine learning approach?*

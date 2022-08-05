@@ -68,18 +68,18 @@ int main(int argc, char const *argv[])
     std::string output_mode;
     do
     {
-        std::cout << "\n/////////////////////////////////////" << std::endl;
-        std::cout << "Enter 's' to output to screen." << std::endl;
-        std::cout << "Enter 'f' to output to files in output-data." << std::endl;
-        std::cout << "\nPlease select a location for output: ";
-        std::cin >> output_mode;
-        assert(valid(output_mode));
-
         std::string input_file_id;
+        std::cout << "\n/////////////////////////////////////" << std::endl;
         std::cout << "Enter the file id (01-06) to read data: ";
         std::cin >> input_file_id;
         std::cout << "-------------------------------------" << std::endl;
         std::string chosem_sample_data = "input-data/sample" + input_file_id + ".txt";
+        
+        std::cout << "Enter 's' to output to screen." << std::endl;
+        std::cout << "Enter 'f' to output to files in output-data." << std::endl;
+        std::cout << "Enter 'q' to quit the program." << std::endl;
+        std::cout << "\nPlease enter one of the options above: ";
+        std::cin >> output_mode;
 
         if (output_mode == "s")
         {
@@ -89,7 +89,16 @@ int main(int argc, char const *argv[])
         {
             output_to_file(new DAG(chosem_sample_data), input_file_id);
         }
-
+        else if (output_mode == "q")
+        {
+            std::cout << "You chose to exit the program." << std::endl;
+            break;
+        }
+        else
+        {
+            std::cout << "Did you enter a valid character?" << std::endl;
+            exit(0);
+        }
     } while (valid(output_mode));
 
     return 0;
