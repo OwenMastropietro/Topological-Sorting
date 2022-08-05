@@ -33,7 +33,8 @@
     - a) Visually Pleasing
     - b) Adjacency List
     - c) Adjacency Matrix
-  ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
+
+![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
 
 #### - We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:
 
