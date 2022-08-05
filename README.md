@@ -10,10 +10,6 @@
   2. `$ ./topological_sort.out`
   3. Follow the prompts for entering significant data.
 
-## 2/2 Extra Credit Opportunities Successfully Pursued:
-  1. Implemented Adjacency List in place of the inferior Adjacency Matrix.
-  2. Implemented Queue-Based Source Removal Algorithm in place of DFS.
-
 ## Project Reflection/Notes... work-in-progress:
 - **Motivation:** Rental properties or Airbnb's need to efficiently select a chain of clients that will yield the maximum total revenue over a given period of time. For example, if a property is available for one year, there is a chance that renting to a smaller chain of clients will yield more revenue than a larger chain of clients depending on how much each client is paying and when they will be booked. This implementation gives us a real-world perspective in utilizing the deacrease-and-conquer approach for topologically sorting.
   - *Additional constraints to account for filtration of "bad" clients?*
@@ -28,7 +24,7 @@
 ## Directed Acyclic Graph
 ![DAG](images/DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
-#### - Representation:
+### *Representation:*
   - We can represent a DAG as follows:
     - a) Visually Pleasing
     - b) Adjacency List
@@ -36,7 +32,7 @@
 
 ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
 
-#### - We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:
+### *We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:* [^1]
 
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
@@ -90,7 +86,7 @@ def dfs(G,v):
 - *The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
-- Recursive Depth-First Search on a DAG:
+- Using a Recursive Depth-First Search on a DAG.
 ```c++
 static void DFS_topological_sort(Graph g)
 {
@@ -120,7 +116,7 @@ static void DFS(Graph G, int v)
   }
 }
 ```
-- Using a Queue-based Source Removal Algorithm on a DAG
+- Using a Queue-based Source Removal Algorithm on a DAG. [^2]
 ```c++
 static void BFS_topological_sort(Graph g)
 {
@@ -172,3 +168,7 @@ static void BFS_topological_sort(Graph g)
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
+
+## 2/2 Extra Credit Opportunities Successfully Pursued:
+[^1]: Implemented Adjacency List in place of the inferior Adjacency Matrix.
+[^2]: Implemented Queue-Based Source Removal Algorithm in place of DFS.
