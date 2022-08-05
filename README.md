@@ -1,8 +1,8 @@
 # Topological Sorting -- CS415 Project 2
 
 ## Contributors:
-  - Soren Richenberg
-  - Owen Mastropietro
+- Soren Richenberg
+- Owen Mastropietro
 
 ## Instructions To Run:
   1. `$ make`
