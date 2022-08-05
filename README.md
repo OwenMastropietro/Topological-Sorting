@@ -25,6 +25,9 @@
 
 - **Context:** In order to employ a decrease-and-conquer approach to achieving this we considered a directed-acyclic-graph-based (DAG) approach such that we could employ a source-removal algorithm, such as Depth First Search (DFS), to ensure all vertices in the graph are visisted - all clients in the sample data set are considered - while constructing an optimal subset of those clients to provide services to in order to achieve the maximum possible revenue. In representing this DAG, an adjacency list was chosen over an adjacency matrix because of it's potentially limiting space taken by entries in the matrix that don't correspond to useful data. This comes at the cost of time int searching the adjacency list. In an effort to offset the additional cost of time from our spacially-improved adjacency list representation, a queue-based source-removal algorithm was chosen over a DFS-based source-removal algorithm in order to reduce the time overhead stemming from the recursive calls made in the DFS approach.
 
+## DAG
+- image
+- description
 ## DFS Algorithm
 Depth First Search is a graph traversal algorithm.
 - *Note: The following two approaches both take O(V + E).*
@@ -53,3 +56,34 @@ def dfs(G,v):
         stack.append(w)
 ```
 ![DFS](label-dfs-traversal.png)
+
+## Topological Sorting Algorithms
+- Recursive Depth-First Search on a Directed Acyclic Graph (DAG):
+```c++
+static void DFS_topological_sort(Graph g)
+{
+  for (int v = 0; v < G.node_count(); v++)
+  {
+    G.set_value(v, null); // Initialize
+  }
+  for (int v = 0; v < G.node_count(); v++)
+  {
+    if (G.get_value(v) != visited)
+    {
+      DFS(G, v);
+    }
+  }
+}
+static void DFS(Graph G, int v)
+{
+  G.set_value(v, visited);
+  int[] neighbor_list = G.neighbors();
+  for (int i = 0; i < neighbor_list.length(); i++)
+  {
+    if (G.get_value(neighbor_list.at(i)) != visited)
+    {
+      DFS(G, neighbor_list.at(i));
+    }
+  }
+}
+```
