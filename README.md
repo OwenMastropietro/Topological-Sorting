@@ -35,10 +35,10 @@
 
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
-| Space Complexity | O(|V| + |E|)<sub>worst</sub> | O(|V|<sup>2</sup>)<sub>worst</sub> |
-| Adding a Vertex | O(1) | O(|V|<sup>2</sup>) |
+| Space Complexity | O(V + E)<sub>worst</sub> | O(V<sup>2</sup>)<sub>worst</sub> |
+| Adding a Vertex | O(1) | O(V<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
-| Removing a Vertex | O(|V| + |E|) | O(|V|<sup>2</sup>) |
+| Removing a Vertex | O(V + E) | O(V<sup>2</sup>) |
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
