@@ -35,3 +35,11 @@ def dfs(G,v):
     if not marked[w]:
       dfs(G, w)
 ```
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
