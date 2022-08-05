@@ -28,14 +28,14 @@
 ## Directed Acyclic Graph
 ![DAG](images/DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
-### - Representation:
+#### - Representation:
   - We can represent a DAG as follows:
     - a) Visually Pleasing
     - b) Adjacency List
     - c) Adjacency Matrix
   ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
 
-### - We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:
+#### - We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:
 
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
