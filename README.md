@@ -34,8 +34,8 @@ X^2^
 
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
-| Space Complexity | O(V + E)~worst~ | O(V^2^) |
-| Adding a Vertex | O(1) | O(V^2^) |
+| Space Complexity | O(V + E)<sub>worst</sub> | O(V^2^) |
+| Adding a Vertex | O(1) | O(V<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
 | Removing a Vertex | O(V + E) | O(V^2^) |
 
