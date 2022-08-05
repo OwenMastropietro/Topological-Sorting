@@ -29,8 +29,8 @@
 - ![DAG](label-DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 ## Depth-First Search Algorithm
-Depth-First Search, DFS, is a graph traversal algorithm.
-- *Note: The following two approaches both take O(V + E).*
+- ![DFS](label-DFS.png)
+- Depth-First Search, DFS, is a graph traversal algorithm.
 ```python
 # Pythonic Pseudo-Code for a pre-ordered recursive approach
 marked = [False] * G.size()
@@ -65,7 +65,7 @@ def dfs(G,v):
       if not marked[w]:
         stack.append(w)
 ```
-![DFS](label-DFS.png)
+- *The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
 - Recursive Depth-First Search on a DAG:
