@@ -102,7 +102,7 @@ def dfs(G,v):
 *The above mentioned algorithms will both run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
-![Topological Sort](images/topoSort2.png)
+![Topological Sort](images/topological-sorting_ofCourse.png)
 - Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
 **Using a Recursive Depth-First Search on a DAG.**
 ```c++
