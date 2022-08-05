@@ -28,6 +28,19 @@
 ## Directed Acyclic Graph
 ![DAG](label-DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
+- **Representation:**
+  - Adjacency List
+    - Space Complexity: O(|V| + |E|) in the worst case.
+    - Time Complexity:
+      - Add Vertex: O(1)
+      - Add edge: O(1)
+      - Remove Vertex: O(|V| + |E|)
+  - Adjacency Matrix
+    - Space Complexity: O(|V|^2^) in the worst case.
+    - Add Vertex: O(|V|^2^) time
+    - Add edge: O(1) time
+    - Remove Vertex: O(|V|^2^) time
+
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](label-BFS_vs_DFS.png)
 - BFS Description
@@ -154,3 +167,8 @@ static void BFS_topological_sort(Graph g)
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
+
+| Syntax | Description |
+| ------ | ------ |
+| Header | Title |
+| Paragrapgh | Text |
