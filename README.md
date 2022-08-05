@@ -34,25 +34,24 @@
 
 ### *We chose to use an Adacency List to represent our DAG due to the following Asymtotic Complexity improvements:* [^1]
 
-<center>
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
 | Space Complexity | O(V + E)<sub>worst</sub> | O(V<sup>2</sup>)<sub>worst</sub> |
 | Adding a Vertex | O(1) | O(V<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
 | Removing a Vertex | O(V + E) | O(V<sup>2</sup>) |
-</center>
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
 - BFS & DFS Description
 
+- ***Figure x.x***
 ```python
 # BFS Implementation
 ```
 
-- *Figure x.x*
 - Depth-First Search, DFS, is a graph traversal algorithm.
+- ***Figure x.x***
 ```python
 # Pythonic Pseudo-Code for a pre-ordered recursive approach
 marked = [False] * G.size()
@@ -64,7 +63,7 @@ def dfs(G,v):
       dfs(G, w)
 ```
 
-- *Figure x.x*
+- ***Figure x.x***
 ```python
 # Pythonic Pseudo-Code for a post-ordered recursive approach
 marked = [False] * G.size()
@@ -76,7 +75,7 @@ def dfs(G,v):
   visit(v) # Post-order
 ```
 
-- *Figure x.x*
+- ***Figure x.x***
 ```python
 # Pythonic Pseudo-Code for iterative approach
 marked = [False] * G.size()
@@ -91,13 +90,14 @@ def dfs(G,v):
       if not marked[w]:
         stack.append(w)
 ```
-- *Figure x.x*
+- ***Figure x.x***
 
 - *The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
 - Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
 - Using a Recursive Depth-First Search on a DAG.
+- ***Figure x.x***
 ```c++
 static void DFS_topological_sort(Graph g)
 {
@@ -127,9 +127,9 @@ static void DFS(Graph G, int v)
   }
 }
 ```
-- *Figure x.x*
 
 - Using a Queue-based Source Removal Algorithm on a DAG. [^2]
+- ***Figure x.x***
 ```c++
 static void BFS_topological_sort(Graph g)
 {
@@ -177,7 +177,6 @@ static void BFS_topological_sort(Graph g)
   }
 }
 ```
-- *Figure x.x*
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
