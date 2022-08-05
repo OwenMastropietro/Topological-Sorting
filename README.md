@@ -48,6 +48,7 @@
 
 **BFS Implementation**
 ```python
+# Iterative Approach
 marked = [False] * G.size()
 def bfs(G,v):
   queue = [v]
@@ -62,6 +63,21 @@ def bfs(G,v):
 ```
 
 **DFS Implementation**
+```python
+# Iterative Approach
+marked = [False] * G.size()
+def dfs(G,v):
+  stack = [v]
+  while(len(stack) > 0):
+    v = stack.pop()
+    if not marked[v]:
+    visit(v)
+    marked[v] = True
+    for w in G.neighbors(v):
+      if not marked[w]:
+        stack.append(w)
+```
+
 ```python
 # Recursive Approach - (Pre-order)
 marked = [False] * G.size()
@@ -83,23 +99,7 @@ def dfs(G,v):
       dfs(G, w)
   visit(v) # Post-order
 ```
-
-```python
-# Iterative Approach
-marked = [False] * G.size()
-def dfs(G,v):
-  stack = [v]
-  while(len(stack) > 0):
-    v = stack.pop()
-    if not marked[v]:
-    visit(v)
-    marked[v] = True
-    for w in G.neighbors(v):
-      if not marked[w]:
-        stack.append(w)
-```
-
-*The above mentioned algorithms will run in O(|v| + |E|) for both the iterative and recursive approaches.*
+*The above mentioned algorithms will both run in O(|v| + |E|) for both the iterative and recursive approaches.*
 
 ## Topological Sorting Algorithms
 - Topological sorting a set of vertices in a DAG yields a linear ordering of its vertices such that, for every directed edge UV, U precedes V in the ordering.
