@@ -1,16 +1,16 @@
 # Topological Sorting -- CS415 Project 2
 
 ## Contributors:
-- Soren Richenberg
-- Owen Mastropietro
+Soren Richenberg
+Owen Mastropietro
 
 ## Instructions To Run:
   1. `$ make`
   2. `$ ./topological_sort.out`
   3. Follow the prompts for entering significant data.
 
-## Extra Credit Opportunity:
-- Implemented Adjacency List in place of the inferior Adjacency Matrix.
+### Extra Credit Opportunity:
+  - Implemented Adjacency List in place of the inferior Adjacency Matrix.
 - Implemented Queue-Based Source Removal Algorithm in place of DFS.
 
 ## Project Reflection/Notes... work-in-progress:
