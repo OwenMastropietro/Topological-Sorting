@@ -11,7 +11,11 @@
   3. Follow the prompts for entering significant data.
 
 ## Project Reflection/Notes... work-in-progress:
-- **Motivation:** Rental properties or Airbnb's need to efficiently select a chain of clients that will yield the maximum total revenue over a given period of time. For example, if a property is available for one year, there is a chance that renting to a smaller chain of clients will yield more revenue than a larger chain of clients depending on how much each client is paying and when they will be booked. This implementation gives us a real-world perspective in utilizing the deacrease-and-conquer approach for topologically sorting.
+- **Motivation:** For this project, we were tasked with thinking from the perspective of a rental agency or an owner of an Airbnb owner wanting to retain an ordered list of clients to rent to.
+- **Example:** Consider a property that will be available for rental all year with multiple clients that can rent it out for various times. Consider also the following clients ....
+TODO 
+
+property is available for one year, there is a chance that renting to a smaller chain of clients will yield more revenue than a larger chain of clients depending on how much each client is paying and when they will be booked. This implementation gives us a real-world perspective in utilizing the deacrease-and-conquer approach for topologically sorting.
   - *Additional constraints to account for filtration of "bad" clients?*
   - *I wonder how I can apply this in a machine learning approach?*
 
