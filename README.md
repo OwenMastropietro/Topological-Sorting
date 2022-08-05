@@ -1,6 +1,6 @@
 # Topological Sorting -- CS415 Project 2
 
-![Topological Sorting](image/topological-sorting.png)
+![Topological Sorting](images/topological-sorting.png)
 ## Contributors:
 - [Soren Richenberg](https://github.com/sorenrichenberg)
 - [Owen Mastropietro](https://github.com/OwenMastropietro)
