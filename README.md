@@ -1,6 +1,6 @@
 # Topological Sorting -- CS415 Project 2
 
-![alt text](label-topological-sorting.png)
+![Topological Sorting](image/topological-sorting.png)
 ## Contributors:
 - [Soren Richenberg](https://github.com/sorenrichenberg)
 - [Owen Mastropietro](https://github.com/OwenMastropietro)
@@ -26,34 +26,22 @@
 - **Context:** In order to employ a decrease-and-conquer approach to achieving this we considered a directed-acyclic-graph-based (DAG) approach such that we could employ a source-removal algorithm, such as Depth First Search (DFS), to ensure all vertices in the graph are visisted - all clients in the sample data set are considered - while constructing an optimal subset of those clients to provide services to in order to achieve the maximum possible revenue. In representing this DAG, an adjacency list was chosen over an adjacency matrix because of it's potentially limiting space taken by entries in the matrix that don't correspond to useful data. This comes at the cost of time int searching the adjacency list. In an effort to offset the additional cost of time from our spacially-improved adjacency list representation, a queue-based source-removal algorithm was chosen over a DFS-based source-removal algorithm in order to reduce the time overhead stemming from the recursive calls made in the DFS approach.
 
 ## Directed Acyclic Graph
-![DAG](label-DAG.png)
+![DAG](images/DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 - **Representation:**
-H~2~O
-X^2^
+  - We can represent a DAG using either an Adjacency List or an Adjacency Matrix.
+  ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
+  <!-- ![Adjacency Matrix]() -->
 
 | Operation | Adjacency List | Adjacency Matrix |
 | ------ | ------ | ------ |
-| Space Complexity | O(V + E)<sub>worst</sub> | O(V^2^) |
-| Adding a Vertex | O(1) | O(V<sup>2</sup>) |
+| Space Complexity | O(|V| + |E|)<sub>worst</sub> | O(|V|<sup>2</sup>)<sub>worst</sub> |
+| Adding a Vertex | O(1) | O(|V|<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
-| Removing a Vertex | O(V + E) | O(V^2^) |
-
-
-  - Adjacency List
-    - Space Complexity: O(|V| + |E|) in the worst case.
-    - Time Complexity:
-      - Add Vertex: O(1)
-      - Add edge: O(1)
-      - Remove Vertex: O(|V| + |E|)
-  - Adjacency Matrix
-    - Space Complexity: O(|V|^2^) in the worst case.
-    - Add Vertex: O(|V|^2^)
-    - Add edge: O(1)
-    - Remove Vertex: O(|V|^2^)
+| Removing a Vertex | O(|V| + |E|) | O(|V|<sup>2</sup>) |
 
 ## Bredth-First Search & Depth-First Search Algorithms
-![BFS & DFS](label-BFS_vs_DFS.png)
+![BFS & DFS](images/BFS_vs_DFS.png)
 - BFS Description
 ```python
 # BFS Implementation
