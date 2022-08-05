@@ -26,10 +26,14 @@
 - **Context:** In order to employ a decrease-and-conquer approach to achieving this we considered a directed-acyclic-graph-based (DAG) approach such that we could employ a source-removal algorithm, such as Depth First Search (DFS), to ensure all vertices in the graph are visisted - all clients in the sample data set are considered - while constructing an optimal subset of those clients to provide services to in order to achieve the maximum possible revenue. In representing this DAG, an adjacency list was chosen over an adjacency matrix because of it's potentially limiting space taken by entries in the matrix that don't correspond to useful data. This comes at the cost of time int searching the adjacency list. In an effort to offset the additional cost of time from our spacially-improved adjacency list representation, a queue-based source-removal algorithm was chosen over a DFS-based source-removal algorithm in order to reduce the time overhead stemming from the recursive calls made in the DFS approach.
 
 ## Directed Acyclic Graph
-- ![DAG](label-DAG.png)
+![DAG](label-DAG.png)
 - A Directed Acyclic Graph, a DAG, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
-## Depth-First Search Algorithm
-- ![DFS](label-DFS.png)
+## Bredth-First Search & Depth-First Search Algorithms
+![BFS & DFS](label-BFS_vs_DFS.png)
+- BFS Description
+```python
+# BFS Implementation
+```
 - Depth-First Search, DFS, is a graph traversal algorithm.
 ```python
 # Pythonic Pseudo-Code for a pre-ordered recursive approach
