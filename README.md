@@ -1,6 +1,6 @@
 # Topological Sorting -- CS415 Project 2
 
-![Topological Sorting](images/topoSort2.png)
+![Topological Sorting](images/topological-sorting.png)
 ## Contributors:
 - [Soren Richenberg](https://github.com/sorenrichenberg)
 - [Owen Mastropietro](https://github.com/OwenMastropietro)
@@ -23,12 +23,12 @@
 
 ## Directed Acyclic Graph
 ![DAG](images/DAG.png)
-- A **Directed Acyclic Graph, a DAG**, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
+A **Directed Acyclic Graph, a DAG**, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 ### *Representation:*
-  - We can represent a DAG as follows:
-    - a) Visual / Theoretical
-    - b) Adjacency List
-    - c) Adjacency Matrix
+We can represent a DAG as follows:
+  a) Visual / Theoretical
+  b) Adjacency List
+  c) Adjacency Matrix
 
 ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
 
@@ -40,6 +40,7 @@
 | Adding a Vertex | O(1) | O(V<sup>2</sup>) |
 | Adding an Edge | O(1) | O(1) |
 | Removing a Vertex | O(V + E) | O(V<sup>2</sup>) |
+
 
 ## Bredth-First Search & Depth-First Search Algorithms
 ![BFS & DFS](images/BFS_vs_DFS.png)
@@ -188,29 +189,6 @@ static void BFS_topological_sort(Graph g)
 ## Useful Resources
 - [Bredth-First Search (BFS) -- Reducible](https://www.youtube.com/watch?v=xlVX7dXLS64)
 - [Depth-First Search (DFS) -- Reducible](https://www.youtube.com/watch?v=PMMc4VsIacU)
-
-## BFS use case
-```python
-def flood_fill(matrix, row, col, pixel_value):
-  start = matrix[row][col]
-  queue = [(row, col)] # Initialize queue with starting location as first value.
-  visited = set()
-  while len(queue) > 0:
-    row, col = queue.pop(0)
-    visited.add((row, col))
-    matrix[row][col] = pixel_value
-    for row, col in neighbors(matrix, row, col, start):
-      if (row, col) not in visited:
-        queue.append((row, col))
-return matrix
-
-def neighbors(matrix, row, col, start):
-  indices = [(row - 1, col), (row + 1, col), (row, col - 1), (row, col + !)]
-  return [(row, col) for row, col in indices if isValid(matrix, row, col) and matrix[row][col] == start]
-
-def isValid(matrix, row, col):
-  return row >= 0 and col >= 0 and row < len(matrix) and col < len(matrix[0])
-```
 
 <!-- FootNotes -->
 [^1]: Extra Credit Oportunity: Implement an Adjacency List in place of the inferior Adjacency Matrix.
