@@ -30,9 +30,9 @@ property is available for one year, there is a chance that renting to a smaller 
 A **Directed Acyclic Graph, a DAG**, is a directed graph which contains no cycles such that no edge connecting two vertices can create a closed loop.
 ### *Representation:*
 We can represent a DAG as follows:
- - a) Visual / Theoretical
- - b) Adjacency List
- - c) Adjacency Matrix
+  a) Visual / Theoretical
+  b) Adjacency List
+  c) Adjacency Matrix
 
 ![Adjacency List vs Adjacency Matrix](images/ADJ_LIST_vs_ADJ_MATRIX.png)
 
